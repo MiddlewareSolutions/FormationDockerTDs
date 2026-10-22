@@ -1,7 +1,13 @@
 # TD pour formation Docker
 
-## TD1 : xxx
+## TD1 : dockerfile
 
-## TD2 : xxx
+README : [ici](./TD1/README.md).
 
-## TD3 : xxx
+## TD2 : notions transverses
+
+README : [ici](./TD2/README.md).
+
+## TD3 : docker-compose
+
+README : [ici](./TD3/README.md).
