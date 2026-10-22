@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: ./app
+    environment:
+      DB_HOST: db
+      DB_NAME: presque_production_db
+      DB_USER: some_user
+      DB_PASSWORD: "MotDePassePasSuperSecret"
+    ports:
+      - "8080:8080"
+
+  db:
+    image: mariadb:11-jammy
+    environment:
+      MARIADB_DATABASE: presque_production_db
+      MARIADB_USER: some_user
+      MARIADB_PASSWORD: "MotDePassePasSuperSecret"
+      MARIADB_ROOT_PASSWORD: "MotDePassePasSuperSecret"
+    volumes:
+      - db-data:/var/lib/mysql
+
+# Déclaration d'un volum nommé, sans plus de paramètres
+volumes:
+  db-data: {}
